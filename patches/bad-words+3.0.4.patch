@@ -1,0 +1,13 @@
+diff --git a/node_modules/bad-words/lib/badwords.js b/node_modules/bad-words/lib/badwords.js
+index 3990c41..611f881 100644
+--- a/node_modules/bad-words/lib/badwords.js
++++ b/node_modules/bad-words/lib/badwords.js
+@@ -32,7 +32,7 @@ class Filter {
+   isProfane(string) {
+     return this.list
+       .filter((word) => {
+-        const wordExp = new RegExp(`\\b${word.replace(/(\W)/g, '\\$1')}\\b`, 'gi');
++        const wordExp = new RegExp(`${word.replace(/(\W)/g, '\\$1')}`, 'gi');
+         return !this.exclude.includes(word.toLowerCase()) && wordExp.test(string);
+       })
+       .length > 0 || false;
