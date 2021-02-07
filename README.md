@@ -7,7 +7,7 @@ Part of my (upcoming) Udemy course on front end development!
 This API is for a coffee delivery service, where customers can sign up and get coffee delivered to their front door!
 Your job is to build the front end and ge this product rolling.
 
-Your data will be stored for 3 days - so you can build a **tailored** app with **real** functions/users.
+Your data will be stored for 1 day - so you can build a **tailored** app with **real** functions/users.
 
 When demo day comes for your job interview or professor, you can show off your app working with and responding to real data.
 
@@ -39,7 +39,7 @@ Schema:
 }
 ```
 
-## Coffee object
+## Message object
 
 The message object represents a message from a user in our chat forum.
 
@@ -81,3 +81,20 @@ Response: `{ token: AUTH_TOKEN }` <br />
 ## Messages API
 
 The Message API allows you to fetch and create messages in the forum.
+
+### Create a message
+
+Authentication: `yes` <br />
+Endpoint: `/message` <br />
+Method: `POST` <br />
+Body: `{ message: string } ` <br />
+Response: `MESSAGE` <br />
+
+### Get all messages
+
+This API will return the last 100 messages
+
+Authentication: `yes` <br />
+Endpoint: `/message` <br />
+Method: `GET` <br />
+Response: `[]MESSAGE` <br />
